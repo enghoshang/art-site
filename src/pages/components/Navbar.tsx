@@ -38,18 +38,18 @@ const Nav = () => {
             onClick={() => {
               setMenu(!menu);
             }}
-            className="mr-auto"
+            className="mr-auto duration-1000 ease-in-out transform hover:scale-110"
           >
             <BiMenuAltRight className="text-2xl m-3" />
           </button>
           <div
             className={
               menu === true
-                ? "fixed right-3 bg-white p-3 mr-24"
+                ? "fixed right-3 bg-blue-500 p-3 mr-24"
                 : "hidden"
             }
           >
-            <ul>
+            <ul className="text-white">
               <li>home</li>
               <li>Arts</li>
               <li>Artists</li>
