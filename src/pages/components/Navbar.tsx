@@ -10,7 +10,7 @@ const Nav = () => {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <div className="bg-green-400 flex">
+      <div className="bg-cyan-400 shadow-lg flex">
         <div className="p-3  flex space-x-5">
           <Image src={facebook} width={25} height={25} />
           <div className="hover:text-blue-400">
@@ -27,7 +27,7 @@ const Nav = () => {
             </Link>
           </div>
 
-          <div className="text-orange-500 tracking-wide">
+          <div className="text-cyan-700 tracking-wide ml-auto">
             <Link href={"/"}>
               <a>Home</a>
             </Link>
@@ -38,18 +38,18 @@ const Nav = () => {
             onClick={() => {
               setMenu(!menu);
             }}
-            className="mr-auto duration-1000 ease-in-out transform hover:scale-110"
+            className="mr-auto hover:scale-110"
           >
             <BiMenuAltRight className="text-2xl m-3" />
           </button>
           <div
             className={
               menu === true
-                ? "fixed right-3 bg-blue-500 p-3 mr-24"
+                ? "fixed right-3 bg-cyan-500 p-3 mr-20 shadow-lg rounded-lg ring-offset-2 ring "
                 : "hidden"
             }
           >
-            <ul className="text-white">
+            <ul className="text-white divide-y divide-blue-200 opacity-75">
               <li>home</li>
               <li>Arts</li>
               <li>Artists</li>
