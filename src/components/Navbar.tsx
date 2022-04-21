@@ -50,10 +50,23 @@ const Nav = () => {
             }
           >
             <ul className="text-white divide-y divide-blue-200 opacity-75">
-              <li>home</li>
-              <li>Arts</li>
-              <li>Artists</li>
-              <li>About us</li>
+              <li>
+                <Link href='/'>
+                <a>Home</a>
+                </Link>
+              </li>
+              <li> <Link href='/Artists'>
+                <a>Artists</a>
+                </Link>
+                </li>
+              <li> <Link href='/Art'>
+                <a>Art</a>
+                </Link>
+                </li>
+              <li> <Link href='/About_us'>
+                <a>About Us</a>
+                </Link>
+                </li>
             </ul>
           </div>
         </div>
