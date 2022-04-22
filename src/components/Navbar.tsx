@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import insta from "/Users/macbookair/Documents/Project/painting-website/public/image/insta.png";
@@ -8,8 +8,23 @@ import { BiMenuAltRight } from "react-icons/bi";
 const Nav = () => {
   // make state true and false for menu
   const [menu, setMenu] = useState(false);
+  useEffect(()=>{
+    // hide menu when click outside
+    const handleClick = (e) => {
+      if (menu && e.target.className !== "nav-menu") {
+      setMenu(false);
+    }
+  }
+  document.addEventListener("click", handleClick);
+  return () => {
+    document.removeEventListener("click", handleClick);
+  };
+  }
+  ,[menu]);
+
   return (
     <>
+
       <div className="bg-cyan-400 shadow-lg flex">
         <div className="p-3  flex space-x-5">
           <Image src={facebook} width={25} height={25} />
@@ -49,7 +64,7 @@ const Nav = () => {
                 : "hidden"
             }
           >
-            <ul className="text-white divide-y divide-blue-200 opacity-75">
+            <ul className="text-white divide-y divide-blue-200 opacity-75 -z-50">
               <li>
                 <Link href='/'>
                 <a>Home</a>

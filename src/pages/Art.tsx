@@ -14,7 +14,7 @@ const Art = ()=> {
   <div className="hover:scale-110 shadow-lg shadow-cyan-500/50">
   <Image src={Van2} width={400} height={400}/>
   </div>
-  <div className="hover:scale-110 shadow-lg shadow-cyan-500/50">
+  <div className="hover:scale-110 shadow-lg shadow-cyan-500/50 -z-30">
   <Image src={Van3} width={400} height={400}/>
   </div>
   <div className="hover:scale-110 shadow-lg shadow-cyan-500/50">
